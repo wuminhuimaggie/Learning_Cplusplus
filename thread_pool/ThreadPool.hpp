@@ -67,9 +67,7 @@ public:
         for(std::thread &worker: workers)
             worker.join();
     }
-    
 private:
-    f
     std::vector<std::thread> workers;
     std::queue<std::function<void()>> tasks;
     std::mutex queue_mutex;
